@@ -28,6 +28,9 @@
         <div id="oauth">
         </div>
         <button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>
+        <button class="btn btn-default" id="log out">log out</button>
+      </div>
+      
       </div>
     </div>
 
@@ -150,7 +153,7 @@
               $('#login').show();
               $('#loggedin').hide();
           }
-
+          document.getElementById('')
           document.getElementById('obtain-new-token').addEventListener('click', function() {
             $.ajax({
               url: '/refresh_token',

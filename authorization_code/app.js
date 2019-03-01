@@ -13,20 +13,20 @@ var db = {
         initDB: function () {
         
         var fs = require("fs");
-        var contents = fs.readFileSync("./alumnos.json");
+        var contents = fs.readFileSync("./spot.json");
        this.opt = JSON.parse(contents);
        //this.opt = "";
 },
 
   saveUser : function(){
-    archivos.writeFileSync('alumnos.json', JSON.stringify(this.opt),
+    archivos.writeFileSync('spot.json', JSON.stringify(this.opt),
       function (error) {
           if (error) {
               console.log('Hubo un error al escribir en el archivo')
               console.log(error);
           }
-      })
-      console.log("Y guarde");;
+      });
+      
   }
 }
 
@@ -182,6 +182,6 @@ app.get('/refresh_token', function(req, res) {
 
 });
 
-console.log('Listening on 8888');
+console.log('Listening');
 app.listen(3000);
 
